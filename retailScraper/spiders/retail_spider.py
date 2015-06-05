@@ -12,14 +12,16 @@ class RetailSpider(scrapy.Spider):
     
     # File Name
     fname = raw_input('Please enter a text file to search: ')
-    
+
     with open(fname, "rb") as ins:
         array = []
         for line in ins:
+            print line
+            line = line.strip()
             array.append(line)
         
     start_urls = array
-    
+
     def parse(self, response):
         item = RetailScraperItem()
         # Find company so you can lookup xpaths
@@ -32,7 +34,9 @@ class RetailSpider(scrapy.Spider):
         titleXPath = PathsHolder.xPaths[comp]['title']
         priceXPath = PathsHolder.xPaths[comp]['price']
 
-        item['company'] = comp        
+
+        item['company'] = comp
+
         item['title'] = response.xpath(titleXPath).extract()[0]
         item['price'] = response.xpath(priceXPath).extract()[0]
         item['url'] = response.url

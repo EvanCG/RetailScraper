@@ -6,7 +6,7 @@ class PathsHolder():
 		},
 		'zales': {
 			'title': '//div[@id="productTitle"]/text()',
-			'price': '//td[@id="productPriceCell"]/div[2]/span/text()'
+			'price': '//td[@id="productPriceCell"]/div[2]/text()'
 		},
 		'kay': {
 			'title': '//h1[@class="product-name"]/text()',
