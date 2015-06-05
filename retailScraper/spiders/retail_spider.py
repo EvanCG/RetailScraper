@@ -16,7 +16,6 @@ class RetailSpider(scrapy.Spider):
     with open(fname, "rb") as ins:
         array = []
         for line in ins:
-            print line
             line = line.strip()
             array.append(line)
         
