@@ -12,7 +12,8 @@ class PathsHolder():
 		},
 		'kay': {
 			'title': '//h1[@class="product-name"]/text()',
-			'price': '//div[@class="prices-and-info clearfix"]//p[@class="price"]/text()'
+			'price': '//div[@class="prices-and-info clearfix"]//p[@class="price"]/text()',
+			'product': '//h3[@class="product-title"]/a/@href'
 		},
 		'helzberg': {
 			'title': '//div[@class="product-detail"]/h2/text()',
