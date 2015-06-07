@@ -10,9 +10,9 @@ class RetailSpider(scrapy.Spider):
     
     # Fill start_urls with text file's data here
     
-    # File Name
     fname = raw_input('Please enter a text file to search: ')
 
+    # Open the input text file and strip each line while reading the urls that are available
     with open(fname, "rb") as ins:
         array = []
         for line in ins:
@@ -33,9 +33,7 @@ class RetailSpider(scrapy.Spider):
         titleXPath = PathsHolder.xPaths[comp]['title']
         priceXPath = PathsHolder.xPaths[comp]['price']
 
-
         item['company'] = comp
-
         item['title'] = response.xpath(titleXPath).extract()[0]
         item['price'] = response.xpath(priceXPath).extract()[0]
         item['url'] = response.url

@@ -1,3 +1,5 @@
+# Single location for xpaths used by these retail spiders.
+# Outer keys should match the domain of each company's URL.
 class PathsHolder():
 	xPaths = {
 		'macys': {

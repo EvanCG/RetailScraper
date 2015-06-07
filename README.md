@@ -1,2 +1,4 @@
 # RetailScraper
-WebScraper to Find Items and their Prices
+Webscraper written with the Scrapy framework.
+
+http://scrapy.org/
