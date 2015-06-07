@@ -5,7 +5,7 @@ from retailScraper.items import RetailScraperItem
 from retailScraper.xpaths import PathsHolder
 
 class RetailSpider(scrapy.Spider):
-    name = "rtspider"
+    name = "ProductSpider"
     allowed_domains = ["macys.org", "zales.com", "kay.com", "helzberg.com", "bluenile.com"]
     
     # Fill start_urls with text file's data here
