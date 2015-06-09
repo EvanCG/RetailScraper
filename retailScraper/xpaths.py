@@ -22,5 +22,9 @@ class PathsHolder():
 		'bluenile': {
 			'title': '//h1[@class="offer-name page-title"]/text()',
 			'price': '//span[@class="price"]/text()'
+		},
+		'walmart': {
+			'title': '//h1[@class="heading-b product-name product-heading js-product-heading"]/text()',
+			'price': '//div[@class="js-price-display price price-display"]/text()'
 		}
 	}
